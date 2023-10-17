@@ -1,0 +1,9 @@
+.Cabecalho {
+    height: 1vh;
+    background: silver;
+    display: flex;
+    align-items: center;
+    padding: 3vh;
+    font-size: 1vh;
+    color: white;
+}

@@ -1,0 +1,26 @@
+.card {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid blueviolet;
+    color: gray;
+}
+
+.card a {
+    text-decoration: none;
+}
+
+.card > a > div {
+    color: #323232;
+}
+
+.card:hover {
+    cursor: pointer;
+    background-color: yellow;
+}
+
+.cardTitulo{
+    color: blueviolet;
+    padding-bottom: 10px;
+    font-size: 1.5rem;
+}

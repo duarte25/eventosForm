@@ -17,15 +17,16 @@ export default function Form() {
         e.preventDefault()
 
         axios.post('http://localhost:3000/eventos', evento)
-        .then(resultado => {console.log(resultado.data)
-            setEvento({
-                titulo: "",
-                descricao: "",
-                dataInicio: "",
-                dataFim: "",
-                local: "",
-            })
-            setMensagem("Evento cadastrado com sucesso!")
+            .then(resultado => {
+                console.log(resultado.data)
+                setEvento({
+                    titulo: "",
+                    descricao: "",
+                    dataInicio: "",
+                    dataFim: "",
+                    local: "",
+                })
+                setMensagem("Evento cadastrado com sucesso!")
             })
             .catch(erro => console.log(erro))
     }

@@ -1,20 +1,32 @@
-import axios from "axios"
-import Input from "@/components/Formulario/Input"
-import { useState } from "react"
+import Cabecalho from '@/components/Cabecalho';
+import ProjectForm from '../../project/ProjectForm'
+import { useHistory } from "react-router-dom";
 
-export default function Form() {
+export default function Index(){
+  
+    
+    function createPost(project) {
+        /*project.cost = 0
+        project.services = []*/
+
+        fetch('http://localhost:3000/eventos', {
+            method: 'POST',
+            headers: {
+                'Content-type': 'application/json',
+            },
+            body: JSON.stringify(project),
+        })
+        .then((resp) => resp.json())
+        .then((data) => {
+            console.log(data)
+        })
+        .catch(err => console.log(err))
+    }
+
     return (
-        
-
-
         <>
-            <form>
-
-                <Input type="text" text="Nome do projeto" name=""/>
-
-                <button > Enviar</button>
-            </form>
+        <Cabecalho/>
+        <ProjectForm handleSubmit={createPost}/>
         </>
     )
 }
-

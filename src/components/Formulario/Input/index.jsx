@@ -1,15 +1,11 @@
 import Styles from './Styles.module.css'
 
-export default function Input({ type, text, name, placeholder, handleOnChange, value }) {
+export default function Input({ text, handleOnChange, ...props }) {
     return (
         <label className={Styles.label}>
             {text}
-            <input type={type}
-                name={name}
-                id={name}
-                placeholder={placeholder}
+            <input  {...props}
                 onChange={handleOnChange}
-                value={value}
                 className={Styles.inputbordas}
             />
             <span className={Styles.focusborder}> </span>

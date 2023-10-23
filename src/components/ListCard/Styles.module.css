@@ -1,8 +1,5 @@
 .listCard{
     display: flex;
     flex-wrap: wrap;
-}
-
-.listCard > div {
-    max-width: 300px;
+    background-color: #2D1E2F;
 }

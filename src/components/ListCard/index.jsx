@@ -18,20 +18,20 @@ export default function ListCard() {
 
     return (
         <>
-        <div className={Styles.listCard}>
+            <div className={Styles.listCard}>
 
-            {eventos.map(e => (
-                <Card
-                    id={e.id}
-                    titulo={e.titulo}
-                    descricao={e.descricao}
-                    dataInicio={formatarData(e.dataInicio)}
-                    dataFim={formatarData(e.dataFim)}
-                    local={(e.local)}
-                    imagem={e.imagem}
+                {eventos.map(e => (
+                    <Card
+                        id={e.id}
+                        titulo={e.titulo}
+                        descricao={e.descricao}
+                        dataInicio={formatarData(e.dataInicio)}
+                        dataFim={formatarData(e.dataFim)}
+                        local={(e.local)}
+                        imagem={(e.imagem)}
                     />
-            ))}
-        </div>
+                ))}
+            </div>
         </>
     )
 }

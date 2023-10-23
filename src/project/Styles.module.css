@@ -101,15 +101,6 @@
     transition-delay: 0.4s;
 }
 
-.buttonform {
-    background-color: #39f;
-    padding: 0.5em 1.3em;
-    color: #fff;
-    font-size: 1.2em;
-    border: none;
-    cursor: pointer;
-}
-
 .bordainversa {
     display: inline-block;
     vertical-align: middle;

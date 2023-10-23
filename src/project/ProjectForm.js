@@ -1,43 +1,63 @@
 import Input from "@/components/Formulario/Input"
-import { useState } from 'react'
-import { useEffect } from "react"
+import React, { useState, useEffect, useRef } from 'react';
 import styles from "./Styles.module.css"
+import Buttom from "@/components/Formulario/Buttom";
 
+export default function Form(projectData) {
 
-export default function Form({ handleSubmit, btnText, projectData }) {
-    const [categories, setCategories] = useState([])
+    const formRef = useRef(null);
     const [project, setProject] = useState(projectData || {})
+    const [file, setFiles] = useState(null);
 
-    useEffect(() => {
-        fetch("http://localhost:3000/eventos", {
-            method: 'GET',
-            headers: {
-                'content-type': 'application/json',
-            },
-        })
-            .then((resp) => resp.json())
-            .then((data) => {
-                setCategories(data)
-            })
-            .catch((err) => console.log(err))
-    }, [])
+    const submit = async (e) => {
+        e.preventDefault();
 
-    const submit = (e) => {
-        e.preventDefault()
-        handleSubmit(project)
-    }
+        // Converta o arquivo para DataURL
+        const reader = new FileReader();
+        if (file) {
+            reader.readAsDataURL(file);
+        }
+        reader.onloadend = async () => {
+            const base64data = reader.result;
+
+            const updatedProject = {
+                ...project,
+                imagem: base64data
+            };
+            await fetch("http://localhost:3000/eventos", {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(updatedProject)
+            }).then((resp) => resp.json())
+                .then((data) => {
+                    console.log(data)
+                })
+                .catch(err => console.log(err))
+            // Trate a resposta conforme necessário
+        };
+
+        // Limpa o input de arquivo
+        if (formRef.current) {
+            formRef.current.reset();
+        }
+    };
 
     function handleChange(e) {
-        setProject({ ...project, [e.target.name]: e.target.value })
-        console.log(project)
+        if (e.target.type === "file") {
+            setFiles(e.target.files[0]);
+        } else {
+            setProject({ ...project, [e.target.name]: e.target.value });
+        }
     }
 
     return (
         <>
-            <form onSubmit={submit} className={styles.formulario}>
-
+            <form onSubmit={submit} ref={formRef} className={styles.formulario}>
                 <h2 className={styles.titulo}>Formulário de evento</h2>
-
+                
+                
                 <Input
                     type="text"
                     text="Titulo"
@@ -45,6 +65,7 @@ export default function Form({ handleSubmit, btnText, projectData }) {
                     placeholder="Titulo"
                     handleOnChange={handleChange}
                 />
+                
 
                 <Input
                     type="Text"
@@ -86,7 +107,8 @@ export default function Form({ handleSubmit, btnText, projectData }) {
                     multiple accept="image/*"
                     handleOnChange={handleChange}
                 />
-                <button className={styles.buttonform}> Enviar</button>
+
+                <Buttom />
             </form>
         </>
     )

@@ -1,5 +1,7 @@
 .listCard{
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
+    justify-content: center;
     background-color: #2D1E2F;
+    min-height: 85vh;
 }

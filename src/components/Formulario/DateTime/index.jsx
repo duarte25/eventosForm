@@ -1,6 +1,6 @@
 import Styles from './Styles.module.css'
 
-export default function Input({ text, handleOnChange, ...props }) {
+export default function DateTime({ text, handleOnChange, ...props }) {
     return (
         <label className={Styles.label}>
             {text}

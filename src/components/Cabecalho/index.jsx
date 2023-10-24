@@ -5,8 +5,8 @@ export default function Cabecalho() {
         <div className={styles.cabecalho}>
             <h1>cineflix</h1>
             <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Cadastrar</a></li>
+                <li><a href="/home">Home</a></li>
+                <li><a href="/test">Cadastrar</a></li>
                 <li><a href="">Atualizar</a></li>
             </ul>
         </div>

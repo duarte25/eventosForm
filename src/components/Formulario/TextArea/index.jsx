@@ -1,11 +1,11 @@
 import Styles from './Styles.module.css'
 
-export default function Input({ text, handleOnChange, ...props }) {
+export default function Textarea({ text, handleOnChange, ...props }) {
     return (
         <label className={Styles.label}>
             {text}
-            <input  {...props}
-                onChange={handleOnChange}
+            <textarea  {...props}
+                onChange={handleOnChange} 
                 className={Styles.inputbordas}
                 required
             />

@@ -1,0 +1,17 @@
+.container{
+    height: auto;
+    background: #32373B;
+    color: white;
+    padding: 3vh;
+}
+
+.rodape {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;      
+    margin: 0;
+}
+

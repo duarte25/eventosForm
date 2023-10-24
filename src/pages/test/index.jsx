@@ -1,12 +1,17 @@
 import Cabecalho from '@/components/Cabecalho';
 import ProjectForm from '../../project/ProjectForm'
+import Rodape from "@/components/Rodape"
+import Styles from "./Styles.module.css"
 
-export default function Index(){
-  
+export default function Index() {
+
     return (
         <>
-        <Cabecalho/>
-        <ProjectForm/>
+            <Cabecalho />
+            <div className={Styles.fundo}>
+                <ProjectForm />
+            </div>
+            <Rodape />
         </>
     )
 }

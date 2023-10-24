@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import axios from "axios"
-import Card from '@/components/card'
+import Card from '@/components/Card'
 import Styles from "./Styles.module.css"
 
 export default function ListCard() {
@@ -19,7 +19,6 @@ export default function ListCard() {
     return (
         <>
             <div className={Styles.listCard}>
-
                 {eventos.map(e => (
                     <Card
                         id={e.id}

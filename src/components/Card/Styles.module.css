@@ -1,18 +1,18 @@
 .card {
-    margin: 10vh;
+    margin: 5vh;
     padding: 2vh;
-    border-radius: 8px;
-    border: 1px solid #F7B32B;
-    color: #FCF6B1;
+    width: 30vh;
 }
 
 .card a {
     text-decoration: none;
+    color: #FCF6B1;
 }
 
-
-.card a  div {
-    color: #FCF6B1;
+.imagem {
+    height: 100%;
+    max-height: 50vh;
+    width: 100%;
 }
 
 .cardTitulo{

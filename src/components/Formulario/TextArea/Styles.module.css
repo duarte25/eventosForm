@@ -19,8 +19,7 @@
 
 .inputbordas:focus {
     border-color:#333;
-    outline: none;
-    
+    outline: none;          
 }
 
 .textarea {

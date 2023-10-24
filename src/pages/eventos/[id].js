@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { useRouter } from "next/router"
 import axios from "axios"
 import Styles from "./Styles.module.css"
+import Image from "next/image";
 
 export default function EventosHome(){
     
@@ -24,10 +25,12 @@ export default function EventosHome(){
         <>
             <div className={Styles.card}>
                 <h1 className={Styles.cardTitulo}>{evento.titulo}</h1>
-                <p>Evento: {evento.descricao}</p>
+                <p>Descrição: {evento.descricao}</p>
                 <p>Data Inicio: {evento.dataInicio}</p>
                 <p>Data Final: {evento.dataFim}</p>
                 <p>Local: {evento.local}</p>
+                <Image src={evento.imagem} width={400}
+                    height={400} />
             </div>
         </>
     )

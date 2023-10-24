@@ -4,9 +4,9 @@
     background: #32373B;
     display: flex;
     align-items: center;
-    padding: 3vh;
-    display: flex;
+    flex-direction: row;
     justify-content: space-between;
+    padding: 3vh;
 }
 
 .cabecalho h1 {
@@ -21,6 +21,8 @@
 .cabecalho ul {
     padding: 10vh;
     list-style-type: none;
+    display: flex;
+    flex-direction: row;
 }
 
 .cabecalho li {

@@ -1,7 +1,9 @@
 import Input from "@/components/Formulario/Input"
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useRef } from 'react';
 import styles from "./Styles.module.css"
 import Buttom from "@/components/Formulario/Buttom";
+import Textarea from "@/components/Formulario/TextArea";
+import DateTime from "@/components/Formulario/DateTime";
 
 export default function Form(projectData) {
 
@@ -65,9 +67,8 @@ export default function Form(projectData) {
                     placeholder="Titulo"
                     handleOnChange={handleChange}
                 />
-                
 
-                <Input
+                <Textarea
                     type="Text"
                     text="Descrição"
                     name="descricao"
@@ -75,7 +76,7 @@ export default function Form(projectData) {
                     handleOnChange={handleChange}
                 />
 
-                <Input
+                <DateTime 
                     type="date"
                     text="Data Inicio"
                     name="dataInicio"
@@ -83,7 +84,7 @@ export default function Form(projectData) {
                     handleOnChange={handleChange}
                 />
 
-                <Input
+                <DateTime   
                     type="date"
                     text="Data Fim"
                     name="dataFim"

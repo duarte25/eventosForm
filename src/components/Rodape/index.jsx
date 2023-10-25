@@ -1,4 +1,3 @@
-import { ST } from "next/dist/shared/lib/utils"
 import Styles from "./Styles.module.css"
 
 export default function Rodape() {

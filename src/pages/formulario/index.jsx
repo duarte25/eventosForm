@@ -1,12 +1,17 @@
-import styles from "./Styles.module.css"
-import Cabecalho from "@/components/Cabecalho"
-import Formulario from "@/components/Formulario/CadastrarForm"
+import Cabecalho from '@/components/Cabecalho';
+import ProjectForm from '../../components/Formulario/ProjectForm/ProjectForm'
+import Rodape from "@/components/Rodape"
+import Styles from "./Styles.module.css"
 
-export default function Home() {
+export default function Index() {
+
     return (
         <>
             <Cabecalho />
-            <Formulario />
+            <div className={Styles.fundo}>
+                <ProjectForm />
+            </div>
+            <Rodape />
         </>
     )
 }

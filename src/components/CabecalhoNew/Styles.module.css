@@ -1,0 +1,40 @@
+.cabecalho {
+    font-family: 'Bebas Neue', sans-serif;
+    height: 1vh;
+    background: rgba(50, 55, 59, 0) ;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding: 3vh;
+}
+
+.cabecalho h1 {
+    font-size: 2.7rem;
+    background: -webkit-linear-gradient(45deg, #E3170A, #F7B32B);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 0.2vh .2vh .4vh rgba(0, 0, 0, 0.3);
+    padding: 10vh;
+}
+
+.cabecalho ul {
+    padding: 10vh;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.cabecalho li a {
+    padding: 1.6vh;
+    text-decoration: none;
+    color: #ffff;
+    transition: background-color 0.2s;
+    font-size: 2vh;
+    font-weight: bold;
+}
+
+.cabecalho li a:hover {
+    background-color: rgba(227, 23, 10, 0.85);
+    color: #ffff;
+    border-radius: .5vh; 
+}

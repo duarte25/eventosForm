@@ -1,0 +1,18 @@
+.body {
+    background-image: url("./718156.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.h1 {
+    color: #ffff;
+    padding: 10vh 5vh;
+    width: 115vh;
+    font-size: 10vh;
+    font-family: 'Secular One';
+    font-style: normal;
+    font-weight: 500;
+}

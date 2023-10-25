@@ -1,0 +1,18 @@
+.formulario .titulo {
+    color: #fff;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+.formulario {
+    max-width: 500px;
+    margin: auto;
+    background: #333;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.fundo {
+    background-color: #F7B32B;
+}

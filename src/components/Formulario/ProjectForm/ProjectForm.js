@@ -1,6 +1,6 @@
 import Input from "@/components/Formulario/Input"
 import React, { useState, useRef } from 'react';
-import styles from "./Styles.module.css"
+import Styles from "./Styles.module.css"
 import Buttom from "@/components/Formulario/Buttom";
 import Textarea from "@/components/Formulario/TextArea";
 import DateTime from "@/components/Formulario/DateTime";
@@ -56,8 +56,8 @@ export default function Form(projectData) {
 
     return (
         <>
-            <form onSubmit={submit} ref={formRef} className={styles.formulario}>
-                <h2 className={styles.titulo}>Formulário de evento</h2>
+            <form onSubmit={submit} ref={formRef} className={Styles.formulario}>
+                <h2 className={Styles.titulo}>Formulário de evento</h2>
                 
                 
                 <Input

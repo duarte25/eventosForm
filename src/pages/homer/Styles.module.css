@@ -1,3 +1,6 @@
+@import url('https://fonts.cdnfonts.com/css/secular-one');
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap") ;
+
 .body {
     background-image: url("./718156.jpg");
     background-size: cover;
@@ -5,14 +8,56 @@
     background-attachment: fixed;
     background-repeat: no-repeat;
     height: 100vh;
+    color: #ffff;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 0 5vh;
 }
 
 .h1 {
-    color: #ffff;
-    padding: 10vh 5vh;
-    width: 115vh;
-    font-size: 10vh;
+    padding: 10vh 0 0 0;
+    font-size: 6vh;
     font-family: 'Secular One';
     font-style: normal;
-    font-weight: 500;
+    font-weight: 400;
 }
+
+.detalhes {
+    padding: 1vh 0;
+    gap: 3vh;
+}
+
+.detalhes, .containerDetalhes{
+    display: flex;
+    flex-direction: row;
+}
+
+.containerDetalhes{
+    display: flex;
+    align-items: center;
+    gap: 1vh;
+}
+
+.detalhes h3 {
+    font-family: 'Secular One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5vh;
+    line-height: 2.5vh;
+    opacity: 0.9;
+}
+
+.descricao{
+    width: 35%;
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 0.025em;
+    line-height: 2.3vh;
+    font-size: 1.8vh;
+    padding: 4vh 0 0 0;
+}
+

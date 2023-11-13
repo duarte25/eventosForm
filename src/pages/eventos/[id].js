@@ -1,18 +1,19 @@
 import { useEffect, useState } from "react"
 import { useRouter } from "next/router"
 import axios from "axios"
+import Cabecalho from "@/components/CabecalhoNew"
+import Rodape from "@/components/Rodape"
 import Styles from "./Styles.module.css"
-import Image from "next/image";
+import Image from "next/image"
 import Link from "next/link";
-import Cabecalho from "@/components/Cabecalho";
-import Rodape from "@/components/Rodape";
+import Buttom from "@/components/Home/Buttom"
+import { ST } from "next/dist/shared/lib/utils"
 
 export default function EventosHome() {
 
     const [evento, setEvento] = useState({})
 
     const router = useRouter()
-
 
     useEffect(() => {
         const id = router.query.id
@@ -24,23 +25,53 @@ export default function EventosHome() {
 
     }, [router])
 
+
     return (
         <>
-            <Cabecalho />
-            <div className={Styles.card}>
-                <h1 className={Styles.cardTitulo}>{evento.titulo}</h1>
-                <Image src={evento.imagem} width={400}
-                    height={400} />
-                <p>Descrição: {evento.descricao}</p>
-                <p>Data Inicio: {evento.dataInicio}</p>
-                <p>Data Final: {evento.dataFim}</p>
-                <p>Local: {evento.local}</p>
-                <button className={Styles.link}>
-                    <Link  href={`/eventos/atualizar/${evento.id}`}>Alterar Evento</Link>
-                </button>
+            <div className={Styles.body} style={{ backgroundImage: `url(${evento.imagem})` }}>
 
+                <div className={Styles.body}>
+                    <Cabecalho />
+                    <div className={Styles.container}>
+                        <h1 className={Styles.h1}>{evento.titulo}</h1>
+                        <div className={Styles.detalhes}>
+                            <div className={Styles.containerDetalhes}>
+                                <Image src="/Star.png" width={17} height={17} />
+                                <h3>{evento.dataInicio}</h3>
+                            </div>
+                            <div className={Styles.containerDetalhes}>
+                                <Image src="/Star.png" width={17} height={17} />
+                                <h3>{evento.dataFim}</h3>
+                            </div>
+                            <div className={Styles.containerDetalhes}>
+                                <Image src="/Star.png" width={15} height={17} />
+                                <h3>{evento.local}</h3>
+                            </div>
+                        </div>
+
+                        <p className={Styles.descricao}>{evento.descricao}</p>
+
+                        <div className={Styles.botoes}>
+                            <div className={Styles.botao}>
+                                <div>
+                                    <Buttom
+                                        text="Trailer"
+                                        src="/Play.png" />
+                                </div>
+                                <div>
+                                    <Buttom
+                                        text="Obter Bilhetes"
+                                        src="/nextIcon.png"
+                                    />
+                                </div>
+                            </div>
+                                <div className={Styles.botaoAtualizar}>
+                                    <Link href={`/eventos/atualizar/${evento.id}`}><h2>Alterar</h2></Link>
+                                </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <Rodape />
         </>
     )
 }

@@ -1,44 +1,107 @@
-.card {
-    margin: 10px;
-    padding: 10px;
-    border-radius: 8px;
-    border: 1px solid rgb(20, 11, 29);
-    background-color: #636161;
-    color: white;
+@import url('https://fonts.cdnfonts.com/css/secular-one');
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap");
+
+.body {
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: 100vh;
+    color: #ffff;
+}
+
+.container {
     display: flex;
     flex-direction: column;
+    padding: 0 0 0 5vh;
+}
+
+.h1 {
+    padding: 10vh 0 0 0;
+    font-size: 6vh;
+    font-family: 'Secular One';
+    font-style: normal;
+    font-weight: 400;
+}
+
+.detalhes {
+    padding: 1vh 0;
+    gap: 3vh;
+}
+
+.detalhes,
+.containerDetalhes {
+    display: flex;
+    flex-direction: row;
+}
+
+.containerDetalhes {
+    display: flex;
     align-items: center;
+    gap: 1vh;
 }
 
-.card a {
-    text-decoration: none;
+.detalhes h3 {
+    font-family: 'Secular One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5vh;
+    line-height: 2.5vh;
+    opacity: 0.9;
 }
 
-.card>a>div {
-    color: #323232;
+.descricao {
+    width: 35%;
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 0.025em;
+    line-height: 2.3vh;
+    font-size: 1.8vh;
+    padding: 4vh 0 0 0;
 }
 
-.card:hover {
-    cursor: pointer;
-    background-color: rgb(72, 95, 131);
+.botao {
+    display: flex;
+    flex-direction: row;
+    gap: 8vh;
 }
 
-.cardTitulo {
+.botoes {
+    padding: 10vh 0 0 0;
+    gap: 2vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.botaoAtualizar {
     color: white;
-    padding-bottom: 10px;
-    font-size: 1.5rem;
-}
-
-.card p {
-    font-size: 2vh;
-}
-
-.link {
-    background: -webkit-linear-gradient(45deg, #E3170A, #F7B32B);
-    padding: 0.5em 1.3em;
-    color: #fff;
-    font-size: 1.2em;
-    border-radius: 5vh;
-    border: none;
+    background-color: rgba(227, 23, 10, 0.8);
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: .5rem;
+    padding: 2vh 4vh;
+    width: 20vh;
+    -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1vh;
 }
+
+.botaoAtualizar h2 {
+
+    font-size: 2.2vh;
+    color: white;
+}
+  
+  .botaoAtualizar:hover {
+    background-color: rgba(227, 23, 10);
+  }
+  
+  .botaoAtualizar:focus {
+    background-color: rgba(227, 23, 10);
+  }

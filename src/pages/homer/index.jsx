@@ -28,7 +28,20 @@ export default function Homer() {
 
                     <p className={Styles.descricao}>Um time dos mais perigosos e encarcerados supervilões são contratados por uma agência secreta do governo, para combater uma poderosa entidade. No entanto, quando eles percebem que não foram escolhidos apenas para ter sucesso, mas também por sua óbvia culpa quando inevitavelmente falharem, terão que decidir se vale a pena ou não continuar correndo risco de morte.</p>
 
-                    <Buttom/>
+                    <div className={Styles.botao}>
+                        <div>
+                            <Buttom
+                                text="Trailer"
+                                src="/Play.png" />
+                        </div>
+                        <div>
+                            <Buttom
+                                text="Obter Bilhetes"
+                                src="/nextIcon.png"
+                            />
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
